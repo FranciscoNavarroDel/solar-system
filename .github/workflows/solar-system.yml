@@ -62,7 +62,8 @@ jobs:
       - name: Check Code Coverage
         run: npm run coverage
 
-      - name: Archive Test Result
+      - name: Archive Test 
+        continue-on-error: true
         uses: actions/upload-artifact@v7
         with:
           name: Code-Coverage-Result
